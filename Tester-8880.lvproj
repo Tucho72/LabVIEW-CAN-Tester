@@ -16,7 +16,7 @@
 	</Item>
 	<Item Name="RT PXI Target" Type="RT PXI Chassis">
 		<Property Name="alias.name" Type="Str">RT PXI Target</Property>
-		<Property Name="alias.value" Type="Str">10.204.217.15</Property>
+		<Property Name="alias.value" Type="Str">10.204.217.22</Property>
 		<Property Name="CCSymbols" Type="Str">OS,Linux;CPU,x64;TARGET_TYPE,RT;</Property>
 		<Property Name="host.ResponsivenessCheckEnabled" Type="Bool">true</Property>
 		<Property Name="host.ResponsivenessCheckPingDelay" Type="UInt">5000</Property>
@@ -37,10 +37,10 @@
 		<Property Name="target.IsRemotePanelSupported" Type="Bool">true</Property>
 		<Property Name="target.RTCPULoadMonitoringEnabled" Type="Bool">true</Property>
 		<Property Name="target.RTDebugWebServerHTTPPort" Type="Int">8001</Property>
-		<Property Name="target.RTTarget.ApplicationPath" Type="Path">/c/ni-rt/startup/startup.rtexe</Property>
+		<Property Name="target.RTTarget.ApplicationPath" Type="Path">/home/lvuser/natinst/bin/tester8880.rtexe</Property>
 		<Property Name="target.RTTarget.EnableFileSharing" Type="Bool">true</Property>
 		<Property Name="target.RTTarget.IPAccess" Type="Str">+*</Property>
-		<Property Name="target.RTTarget.LaunchAppAtBoot" Type="Bool">false</Property>
+		<Property Name="target.RTTarget.LaunchAppAtBoot" Type="Bool">true</Property>
 		<Property Name="target.RTTarget.VIPath" Type="Path">/home/lvuser/natinst/bin</Property>
 		<Property Name="target.server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="target.server.control.propertiesEnabled" Type="Bool">true</Property>
@@ -485,17 +485,64 @@ AddOutputFilter chunkFilter
 				<Item Name="XNET Write (State LIN Schedule Change).vi" Type="VI" URL="/&lt;vilib&gt;/xnet/xnet.llb/XNET Write (State LIN Schedule Change).vi"/>
 				<Item Name="XNET Write.vi" Type="VI" URL="/&lt;vilib&gt;/xnet/xnet.llb/XNET Write.vi"/>
 			</Item>
-			<Item Name="Manage Internal Data.vi" Type="VI" URL="../../ECU/Modules/ECU Internal Communications/Manage Internal Data.vi"/>
-			<Item Name="Manage Internal Data.vi" Type="VI" URL="../../Tester/Modules/Tester Internal Communication/Manage Internal Data.vi"/>
+			<Item Name="ECU InterComm.lvlib" Type="Library" URL="../../ECU-9030/Modules/ECU Internal Communications/ECU InterComm.lvlib"/>
 			<Item Name="nixlvapi.dll" Type="Document" URL="nixlvapi.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="QMH Item.ctl" Type="VI" URL="../../ECU/Modules/ECU Internal Communications/QMH Item.ctl"/>
-			<Item Name="QMH Item.ctl" Type="VI" URL="../../Tester/Modules/Tester Internal Communication/QMH Item.ctl"/>
-			<Item Name="Queues - Get.vi" Type="VI" URL="../../ECU/Modules/ECU Internal Communications/Queues - Get.vi"/>
-			<Item Name="Queues - Get.vi" Type="VI" URL="../../Tester/Modules/Tester Internal Communication/Queues - Get.vi"/>
 			<Item Name="scan-diag (1).vi" Type="VI" URL="../../../../../../../Downloads/scan-diag (1).vi"/>
 		</Item>
-		<Item Name="Build Specifications" Type="Build"/>
+		<Item Name="Build Specifications" Type="Build">
+			<Item Name="Tester 8880" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{14FA75F0-7E19-46DC-8EAF-63BA5EDCB86D}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{F919F82B-BA23-4B66-A5B1-165237BFC756}</Property>
+				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
+				<Property Name="App_serverType" Type="Int">0</Property>
+				<Property Name="App_winsec.description" Type="Str">http://www.ITESM.com</Property>
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{B54BB927-795C-4736-A60E-457347DE2A1B}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">Tester 8880</Property>
+				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/NI_AB_TARGETNAME/Tester 8880</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
+				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{41F1710E-E5C3-43B0-8B7E-B73BC2AA9F6E}</Property>
+				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
+				<Property Name="Bld_version.build" Type="Int">1</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">tester8880.rtexe</Property>
+				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/tester8880.rtexe</Property>
+				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">/home/lvuser/natinst/bin/data</Property>
+				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Source[0].itemID" Type="Str">{64F5816A-992B-4B3B-BDC1-DD8F0DC024BB}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/RT PXI Target/Real-Time Tester/Tester.vi</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[2].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[2].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/RT PXI Target/CAN Commands Interpreter</Property>
+				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[2].type" Type="Str">Container</Property>
+				<Property Name="SourceCount" Type="Int">3</Property>
+				<Property Name="TgtF_companyName" Type="Str">ITESM</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Tester 8880</Property>
+				<Property Name="TgtF_internalName" Type="Str">Tester 8880</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2024 ITESM</Property>
+				<Property Name="TgtF_productName" Type="Str">Tester 8880</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{0728C808-E5D2-4487-8406-FEEA00B2A576}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">tester8880.rtexe</Property>
+				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
+			</Item>
+		</Item>
 	</Item>
 </Project>
