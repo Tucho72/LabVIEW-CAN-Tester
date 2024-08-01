@@ -16,6 +16,7 @@
 		<Item Name="Reset VI Front Panel.vi" Type="VI" URL="../Reset VI Front Panel.vi"/>
 		<Item Name="Enable PWM Out.vi" Type="VI" URL="../Enable PWM Out.vi"/>
 		<Item Name="Deqeue UI Element.vi" Type="VI" URL="../Deqeue UI Element.vi"/>
+		<Item Name="Reinitialize UI Objects.vi" Type="VI" URL="../Reinitialize UI Objects.vi"/>
 	</Item>
 	<Item Name="Queue" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
